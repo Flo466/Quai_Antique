@@ -101,7 +101,7 @@ text-justify {
 @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(15px);
+      transform: translateY(7px);
     }
     to {
       opacity: 1;
@@ -110,7 +110,7 @@ text-justify {
   }
   
   .animated-container {
-    animation: fadeIn 1.5s ease-out;
+    animation: fadeIn 1s ease-out;
   }
 
 .allReservations {
