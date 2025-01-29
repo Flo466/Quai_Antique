@@ -1,3 +1,4 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
 
 html {
@@ -57,7 +58,8 @@ text-justify {
 .image-card {
     position: relative;
     &:hover {
-        .titre-image {
+        .titre-image, 
+        .action-image-buttons {
             opacity: 1;
         }
 
@@ -78,6 +80,18 @@ text-justify {
         opacity: 0;
         transition: all 0.3s;
     }
+
+    .action-image-buttons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.3s;
+    }
 }
 
 .form-label {
@@ -87,7 +101,7 @@ text-justify {
 @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(8px);
+      transform: translateY(15px);
     }
     to {
       opacity: 1;
