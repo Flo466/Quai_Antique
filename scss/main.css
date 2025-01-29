@@ -12067,4 +12067,10 @@ text-justify {
 }
 .animated-container {
   animation: fadeIn 1.5s ease-out;
+}
+
+.allReservations a {
+  display: block;
+  color: #292222;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */
