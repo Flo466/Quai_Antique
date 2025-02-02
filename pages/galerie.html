@@ -4,18 +4,21 @@
     </div>
 </div>
 
-<div class="container animated-container">
+<div class="container">
     <div class="text-center"> 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+        data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
     </div>
     <div class="row row-cols-2 row-cols-lg-3">
         <div class="col p-3">
             <div class="image-card text-white">
                <img src="/images/sushi-8113165_1280.jpg" class="rounded w-100">
                <p class="titre-image">Sushi</p>
-               <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light"  data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+               <div class="action-image-buttons" data-show="admin">
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" 
+                    data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-outline-light"  data-bs-toggle="modal" 
+                    data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
                </div>
             </div>
         </div>
@@ -44,12 +47,14 @@
 </div>
 
 <!-- Edite Modal -->
-<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalModalLabel" aria-hidden="true">
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" 
+aria-labelledby="EditionPhotoModalModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title fs-5" id="EditionPhotoModalModalLabel">Edition photo</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" 
+            aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <form>
