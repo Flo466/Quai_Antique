@@ -35,14 +35,14 @@ function checkCredentials() {
         return response.json();  // Retourne la promesse pour la prochaine étape
     })
     .then((result) => {
-        if (result && result.apiToken) {
+        if (result?.apiToken) {
             const token = result.apiToken;
             setToken(token);
-            setCookie(roleCookieName, result.roles[0], 7);
+            setCookie(roleCookieName, result.roles?.[0] ?? "defaultRole", 7);
             window.location.replace("/");
         } else {
             throw new Error("apiToken manquant dans la réponse");
-        }
+        }        
     })
     .catch((error) => {
         // Affiche l'erreur dans la console

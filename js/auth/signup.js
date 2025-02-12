@@ -117,7 +117,7 @@ function signupUser() {
         }  
     })
     .then((result) => {
-        alert(dataForm.get("firstName")+", votre inscription a bien été effectuée.")
+        alert((dataForm.get("firstName")?.trim() ?? "Utilisateur") + ", votre inscription a bien été effectuée.");
         document.location.href = "/signin"
         console.log(result)
     })
