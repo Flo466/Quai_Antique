@@ -110,7 +110,7 @@ function signupUser() {
     fetch(apiURL + "registration", requestOptions)
     .then((response) => {
         if(response.ok) {
-            response.json()
+            return response.json()
         }
         else {
             alert("erreur lors de l'inscription")

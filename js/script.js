@@ -89,3 +89,28 @@ function sanitizeHtml(text) {
     tempHtml.textContent = text;
     return tempHtml.innerHTML
 };
+
+function getInfoUser() {
+    const myHeaders = new Headers();
+    myHeaders.append("X-AUTH-TOKEN", getToken())
+
+    let requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow"
+    };
+
+    fetch(apiURL+"account/me", requestOptions)
+    .then((response) => {
+        if(response.ok) {
+            return response.json()
+        }
+        else {
+            console.log("Cannot get user informations")
+        }  
+    })
+    .then((result) => {
+        return result;
+    })
+    .catch((error) => console.error(error));
+};
