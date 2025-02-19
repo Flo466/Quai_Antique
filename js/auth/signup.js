@@ -93,11 +93,16 @@ function signupUser() {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    let sanitizedFirstName = sanitizeHtml(dataForm.get("firstName").trim());
+    let sanitizedLastName = sanitizeHtml(dataForm.get("name").trim());
+    let sanitizedEmail = sanitizeHtml(dataForm.get("email").trim());
+    let sanitizedPassword = sanitizeHtml(dataForm.get("password").trim());
+
     let raw = JSON.stringify({
-        "firstName": dataForm.get("name"),
-        "lastName": dataForm.get("firstName"),
-        "email": dataForm.get("email"),
-        "password": dataForm.get("password")
+        "firstName": sanitizedFirstName,
+        "lastName": sanitizedLastName,
+        "email": sanitizedEmail,
+        "password": sanitizedPassword
     });
 
     let requestOptions = {

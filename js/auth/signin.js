@@ -12,9 +12,12 @@ function checkCredentials() {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    let sanitizedEmail = sanitizeHtml(dataForm.get("email"));
+    let sanitizedPassword = sanitizeHtml(dataForm.get("password"));
+
     let raw = JSON.stringify({
-        "username": dataForm.get("email"),
-        "password": dataForm.get("password")
+        "username": sanitizedEmail,
+        "password": sanitizedPassword
     });
 
     let requestOptions = {
