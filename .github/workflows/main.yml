@@ -15,7 +15,7 @@ jobs:
         username: restaurant-quai-antique
         password: ${{ secrets.ftp_password }}
         server-dir: /www/
-        exclude:
+        exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/boostrap/scss/**
